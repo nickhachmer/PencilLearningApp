@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { fabric } from 'fabric';
+import { Color } from 'fabric/fabric-impl';
 
 @Component({
   selector: 'fab-app',
@@ -8,10 +9,14 @@ import { fabric } from 'fabric';
 })
 export class FabricAppComponent {
     canvas: any;
+    color: Color;
 
     ngOnInit() {
         this.canvas = new fabric.Canvas("DrawingCanvas");
-        this.canvas.add(new fabric.IText('Hello Fabric!!'));
+        this.canvas.isDrawingMode = true;   
     }
 
+    ColorChange() {
+      this.canvas.freeDrawingBrush.color = this.color;
+    }
 }

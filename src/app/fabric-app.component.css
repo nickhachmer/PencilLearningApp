@@ -1,5 +1,9 @@
 
+.outer {
+    text-align:center;
+}
 
-.canvas-container {
-    margin: 0 auto;
+.CanvasDiv {
+    display: inline-block; 
+    margin: auto;
 }
